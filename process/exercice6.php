@@ -1,0 +1,24 @@
+<?php 
+
+// On vérifie que la méthode utilisé est bien celle qu'on voulait -->
+if ($_SERVER["REQUEST_METHOD"] !== "GET") {
+    header("Location: ../public/exercice6.php");
+   exit();
+}
+
+// On vérifie qu'on a bien reçu tous les inputs
+if (!isset($_GET["shows"])) {
+    header("Location: ../public/exercice6.php");
+ exit();
+}
+
+// On vérifie qu'un des champs n'est pas vide
+if (empty($_GET["shows"])) {
+    header("Location: ../public/exercice6.php");
+    exit();
+}
+
+// Input Sanitization
+$clients = htmlspecialchars(trim($_GET["shows"]));
+
+?>
