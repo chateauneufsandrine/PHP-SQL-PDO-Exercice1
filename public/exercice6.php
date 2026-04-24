@@ -13,7 +13,7 @@ ORDER BY shows.title ASC;');
 
 // on récupère la réponse à la requète grâce à fetchAll(), car j'ai pls livres en BDD
 $shows = $request->fetchAll(PDO::FETCH_ASSOC);
-// var_dump($clients);
+
 
 
 ?>
