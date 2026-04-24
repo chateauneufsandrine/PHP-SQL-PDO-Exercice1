@@ -37,25 +37,25 @@ $clients = $request->fetchAll(PDO::FETCH_ASSOC);
         <p>Nom : <?= $client["lastName"] ?></p>
         <p>Prénom : <?= $client["firstName"] ?></p>
         <p>Date de naissance : <?= $client["birthDate"] ?></p>
-      
-   <p>Carte de fidélité :
-        <?php if ($client["card"] == 1) { ?>
-            Oui
-        <?php } else { ?>
-            Non
-        <?php } ?>
-    </p>
+
+        <p>Carte de fidélité :
+            <?php if ($client["card"] == 1) { ?>
+                Oui
+            <?php } else { ?>
+                Non
+            <?php } ?>
+        </p>
 
         <p>Numéro de carte :
-        <?php if ($client["card"] == 1) { ?>
-            <?= $client["cardNumber"] ?>
-        <?php } else { ?>
-            Aucun
-        <?php } ?>
-    </p>
+            <?php if ($client["card"] == 1) { ?>
+                <?= $client["cardNumber"] ?>
+            <?php } else { ?>
+                Aucun
+            <?php } ?>
+        </p>
 
 
-        <?php } ?>
+    <?php } ?>
 </body>
 
 </html>
